@@ -16,18 +16,19 @@ do
 		root=/home/daniil/Документы/$direct
 		filename=$(basename $file)
 		#echo $filename
-		echo $PWD
-		if [ -f $root/$filename ]
+		#echo $PWD
+		if [ -e $root/$filename ]
 		then
 			count=1
-			while [ -f $var/$fiename$count ]
+			while [ -e $var/$fiename$count ]
 			do
-				((count++))
+				count=$count+1
 			done
-			newname=$fiename$count
+			newname=$filename$count
 			#echo $newname
+			filename=$newname
 		fi
-		cp $file $root/$newname
+		cp $file $root/$filename
 	done
 done
 tar -cf $arch.tar $direct
