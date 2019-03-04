@@ -8,7 +8,7 @@ execute_process(COMMAND python A/preparing.py)
 
 
 
-add_subdirectory(B)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/B)
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 

@@ -2,4 +2,5 @@
 /home/daniil/Документы/техпрог/CMakeFiles/HW.dir
 /home/daniil/Документы/техпрог/CMakeFiles/edit_cache.dir
 /home/daniil/Документы/техпрог/B/CMakeFiles/rebuild_cache.dir
+/home/daniil/Документы/техпрог/B/CMakeFiles/B.dir
 /home/daniil/Документы/техпрог/B/CMakeFiles/edit_cache.dir

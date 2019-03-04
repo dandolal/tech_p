@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/daniil/Документы/техпрог && $(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/техпрог/CMakeFiles /home/daniil/Документы/техпрог/B/CMakeFiles/progress.marks
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f CMakeFiles/Makefile2 B/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/техпрог/CMakeFiles /home/daniil/Документы/техпрог/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/техпрог/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f CMakeFiles/Makefile2 B/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -97,60 +97,71 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f CMakeFiles/Makefile2 B/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f CMakeFiles/Makefile2 B/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/daniil/Документы/техпрог && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-B/CMakeFiles/B.dir/rule:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f CMakeFiles/Makefile2 B/CMakeFiles/B.dir/rule
-.PHONY : B/CMakeFiles/B.dir/rule
+#=============================================================================
+# Target rules for targets named HW
 
-# Convenience name for target.
-B : B/CMakeFiles/B.dir/rule
+# Build rule for target.
+HW: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HW
+.PHONY : HW
 
+# fast build rule for target.
+HW/fast:
+	$(MAKE) -f CMakeFiles/HW.dir/build.make CMakeFiles/HW.dir/build
+.PHONY : HW/fast
+
+#=============================================================================
+# Target rules for targets named B
+
+# Build rule for target.
+B : cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 B
 .PHONY : B
 
 # fast build rule for target.
 B/fast:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f B/CMakeFiles/B.dir/build.make B/CMakeFiles/B.dir/build
+	$(MAKE) -f B/CMakeFiles/B.dir/build.make B/CMakeFiles/B.dir/build
 .PHONY : B/fast
 
-lib.o: lib.cpp.o
+C/main.o: C/main.cpp.o
 
-.PHONY : lib.o
+.PHONY : C/main.o
 
 # target to build an object file
-lib.cpp.o:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f B/CMakeFiles/B.dir/build.make B/CMakeFiles/B.dir/lib.cpp.o
-.PHONY : lib.cpp.o
+C/main.cpp.o:
+	$(MAKE) -f CMakeFiles/HW.dir/build.make CMakeFiles/HW.dir/C/main.cpp.o
+.PHONY : C/main.cpp.o
 
-lib.i: lib.cpp.i
+C/main.i: C/main.cpp.i
 
-.PHONY : lib.i
+.PHONY : C/main.i
 
 # target to preprocess a source file
-lib.cpp.i:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f B/CMakeFiles/B.dir/build.make B/CMakeFiles/B.dir/lib.cpp.i
-.PHONY : lib.cpp.i
+C/main.cpp.i:
+	$(MAKE) -f CMakeFiles/HW.dir/build.make CMakeFiles/HW.dir/C/main.cpp.i
+.PHONY : C/main.cpp.i
 
-lib.s: lib.cpp.s
+C/main.s: C/main.cpp.s
 
-.PHONY : lib.s
+.PHONY : C/main.s
 
 # target to generate assembly for a file
-lib.cpp.s:
-	cd /home/daniil/Документы/техпрог && $(MAKE) -f B/CMakeFiles/B.dir/build.make B/CMakeFiles/B.dir/lib.cpp.s
-.PHONY : lib.cpp.s
+C/main.cpp.s:
+	$(MAKE) -f CMakeFiles/HW.dir/build.make CMakeFiles/HW.dir/C/main.cpp.s
+.PHONY : C/main.cpp.s
 
 # Help Target
 help:
@@ -159,11 +170,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... B"
+	@echo "... HW"
 	@echo "... edit_cache"
-	@echo "... lib.o"
-	@echo "... lib.i"
-	@echo "... lib.s"
+	@echo "... B"
+	@echo "... C/main.o"
+	@echo "... C/main.i"
+	@echo "... C/main.s"
 .PHONY : help
 
 
@@ -175,6 +187,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/daniil/Документы/техпрог && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
