@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project (HW)
+project (hw)
 
 execute_process(COMMAND python A/preparing.py)
 
