@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/daniil/Документы/техпрог/C/main.cpp
+main.h
+/home/daniil/Документы/техпрог/C/main.h
+iostream
+-
+
+/home/daniil/Документы/техпрог/C/main.h
+A/index.h
+/home/daniil/Документы/техпрог/C/A/index.h
+B/lib.h
+/home/daniil/Документы/техпрог/C/B/lib.h
+
+A/index.h
+
+B/lib.h
+
